@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private float moveSpeed = 5f;
 
-    public float moveSpeed = 5f;
-    //public float jumpSpeed = 2f;
-    public GameObject Caveman;
+    [SerializeField]
+    private float jumpSpeed = 2f;
     
+    [SerializeField]
+    private GameObject Caveman;
 
+
+      
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Horizontal")){
 
+        if (Input.GetButton("Horizontal")){
             if (Input.GetKey("right"))
             {
                 print("right arrow key is held down");
@@ -45,18 +50,15 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown("space"))
-        {
-            Caveman.transform.position += new Vector3(0, moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"), 0);
-        }
-        
-        // if (Input.GetButton("Jump")){
-        //     boxboi.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpSpeed));
-        // }
-        
-        //to move with the arrow up keys
-        // if (Input.GetButton("Vertical")){
+        // if (Input.GetKeyDown("space"))
+        // {
         //     Caveman.transform.position += new Vector3(0, moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"), 0);
         // }
+        
+        if (Input.GetKey("space")){
+            Caveman.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpSpeed));
+        }
+        
+
     }
 }
