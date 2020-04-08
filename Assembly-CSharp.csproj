@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <None Include="Assets\Resources\path.txt" />
      <None Include="Assets\Resources\oceantown.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
