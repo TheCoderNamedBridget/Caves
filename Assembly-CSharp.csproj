@@ -54,12 +54,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Animal\AnimalMovement.cs" />
+     <Compile Include="Assets\Scripts\AnimalMovement\AnimalMovement.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Fruit.cs" />
+     <Compile Include="Assets\Scripts\Plants\Fruit.cs" />
+     <Compile Include="Assets\Scripts\Plants\Tree.cs" />
      <Compile Include="Assets\Scripts\Player\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInfo.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Tree.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <None Include="Assets\Resources\path.txt" />
      <None Include="Assets\Resources\oceantown.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">

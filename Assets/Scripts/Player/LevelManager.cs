@@ -2,7 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+/**
+TODOs:
+1.!-- Animate Crabs
+2.!-- Add Health bars for self and animals
+3.!-- Add menu bar for choosing to act on object
+4.!-- Animate coconuts to fall and stay on the ground for a couple seconds
+5.!-- Add player actions
+*/
 
 public class LevelManager : MonoBehaviour
 {
