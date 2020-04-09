@@ -18,10 +18,11 @@ public class Tree : MonoBehaviour
     [SerializeField]
     private GameObject fruit;
 
+    [SerializeField]
     private int numberOfFruit;
 
 
-    float timeLeft = 10.0f;
+    float timeLeft = 20.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,7 @@ public class Tree : MonoBehaviour
             {
                 ProduceFruit();
             }
-            
+            timeLeft = 20f;
         }
     }
 
@@ -53,5 +54,6 @@ public class Tree : MonoBehaviour
         GameObject newFruit = Instantiate( fruit );
         newFruit.transform.position = new Vector3(tree.transform.position.x - 2, tree.transform.position.y);
     }
+
 
 }
