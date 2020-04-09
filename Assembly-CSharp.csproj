@@ -55,8 +55,10 @@
   <ItemGroup>
      <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Fruit.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Tree.cs" />
      <None Include="Assets\Resources\path.txt" />
      <None Include="Assets\Resources\oceantown.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">

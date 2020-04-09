@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] tilePrefabs;
+
+
 
     public float TileSize
     {
@@ -35,6 +38,7 @@ public class LevelManager : MonoBehaviour
         int mapY = mapData.Length;
 
         Vector3 worldStart = Camera.main.ScreenToWorldPoint( new Vector3( 0, Screen.height));
+
         for ( int y = 0; y < mapY; y++ )
         {
 
@@ -42,17 +46,25 @@ public class LevelManager : MonoBehaviour
 
             for ( int x = 0; x < mapX; x++ )
             {
+
                 PlaceTile( newTiles[x].ToString(), x, y, worldStart  );
+                
+                if ( newTiles[x].ToString().Equals("4")){
+
+                    PlaceTile( "0", x, y, worldStart  );
+                }
             }
         }
     }
 
     private void PlaceTile( string tileType, int x, int y, Vector3 worldStart)
     {
-
         int tileIndex = int.Parse(tileType);
         GameObject newTile = Instantiate(tilePrefabs[tileIndex]);
         newTile.transform.position = new Vector3(worldStart.x +  (TileSize * x), worldStart.y - (TileSize * y));
+        
+        
+        
     }
 
     private string[] ReadLevelText()
