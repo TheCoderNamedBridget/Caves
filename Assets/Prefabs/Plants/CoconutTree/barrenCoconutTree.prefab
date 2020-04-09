@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8200261844262421506}
   - component: {fileID: 2449072551249244645}
   - component: {fileID: 114311642010521412}
+  - component: {fileID: 50631856004217880}
+  - component: {fileID: 61350039560351282}
   m_Layer: 0
   m_Name: barrenCoconutTree
   m_TagString: Untagged
@@ -94,3 +96,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tree: {fileID: 616903677694823042}
   fruit: {fileID: 311115525881265687, guid: 282bfbfec4cd05f46a90f2937ef149ec, type: 3}
+  numberOfFruit: 0
+--- !u!50 &50631856004217880
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616903677694823042}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61350039560351282
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616903677694823042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.7, y: 7.05}
+    newSize: {x: 6.96, y: 5.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.7, y: 7.05}
+  m_EdgeRadius: 0
