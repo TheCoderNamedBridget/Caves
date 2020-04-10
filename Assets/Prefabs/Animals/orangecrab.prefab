@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2552431735660324802}
   - component: {fileID: 8799299258084938689}
+  - component: {fileID: 114201004271217116}
   m_Layer: 0
   m_Name: orangecrab
   m_TagString: Untagged
@@ -79,3 +80,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &114201004271217116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64161775424019380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e43562bae84c541a0bf020240d87ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  Animal: {fileID: 64161775424019380}

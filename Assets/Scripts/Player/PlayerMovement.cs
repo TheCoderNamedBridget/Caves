@@ -30,34 +30,31 @@ public class PlayerMovement : MonoBehaviour
             {
                 print("right arrow key is held down");
                 Caveman.GetComponent<SpriteRenderer>().flipX = false;
+                Caveman.transform.position += new Vector3(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0, 0);
             }
 
             if (Input.GetKey("left"))
             {
                 print("left arrow key is held down");
                 Caveman.GetComponent<SpriteRenderer>().flipX = true;
+                Caveman.transform.position += new Vector3(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0, 0);
             }
 
             //Debug.Log("Tried to move");
-            Caveman.transform.position += new Vector3(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0, 0);
+            
 
         }
 
-        if (Input.GetButton("Vertical")){
-
-            Debug.Log("Inside Vert");
+        if (Input.GetKey("up"))
+        {
             Caveman.transform.position += new Vector3(0, moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"), 0);
-
         }
 
-        // if (Input.GetKeyDown("space"))
-        // {
-        //     Caveman.transform.position += new Vector3(0, moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"), 0);
-        // }
-        
-        if (Input.GetKey("space")){
-            Caveman.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpSpeed));
+        if (Input.GetKey("down"))
+        {
+            Caveman.transform.position += new Vector3(0, moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"), 0);
         }
+
         
 
     }
