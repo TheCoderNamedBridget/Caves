@@ -204,9 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548810db9ae77d4c8d1bc915cde093a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpSpeed: 2
   Caveman: {fileID: 249622840}
+  target: {fileID: 0}
 --- !u!4 &249622843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7553222209461393609, guid: d43388190850cdf43ad210fdc52c3109,
