@@ -18,15 +18,16 @@ void Update ()
 {
     if(Input.GetMouseButtonDown(0))
     {
-        Debug.Log("Cavemane positon x " + Caveman.transform.position.x + " Mouse pos x " + Input.mousePosition.x/25);
-        if ( Caveman.transform.position.x < Input.mousePosition.x/15)
-        {
-            Caveman.GetComponent<SpriteRenderer>().flipX = false;
-        } 
-        else if ( Caveman.transform.position.x > Input.mousePosition.x/15 )
-        {
-            Caveman.GetComponent<SpriteRenderer>().flipX = true;
-        }
+        //Todo fix character flip
+        // Debug.Log("Cavemane positon x " + Caveman.transform.position.x + " Mouse pos x " + Input.mousePosition.x/25);
+        // if ( Caveman.transform.position.x < Input.mousePosition.x/18)
+        // {
+        //     Caveman.GetComponent<SpriteRenderer>().flipX = false;
+        // } 
+        // else if ( Caveman.transform.position.x > Input.mousePosition.x/18 )
+        // {
+        //     Caveman.GetComponent<SpriteRenderer>().flipX = true;
+        // }
         
         targetPos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.position = targetPos;
