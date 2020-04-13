@@ -4,43 +4,68 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-[SerializeField] GameObject Caveman;
-[SerializeField] Transform target;
+//[SerializeField] GameObject Caveman;
+[SerializeField] 
+Transform target;
 float speed = 6f;
 Vector2 targetPos;
  
+
+
 private void Start()
 {
+    
     targetPos = transform.position;
 }
  
 void Update ()
 {
+transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
     if(Input.GetMouseButtonDown(0))
     {
         //Todo fix character flip
         // Debug.Log("Cavemane positon x " + Caveman.transform.position.x + " Mouse pos x " + Input.mousePosition.x/25);
-        // if ( Caveman.transform.position.x < Input.mousePosition.x/18)
+        // if ( ((Vector2)transform.position).x < targetPos.x)
         // {
-        //     Caveman.GetComponent<SpriteRenderer>().flipX = false;
-        // } 
-        // else if ( Caveman.transform.position.x > Input.mousePosition.x/18 )
-        // {
+        //     Debug.Log("inside " + transform.position.x + " < " + targetPos.x);
         //     Caveman.GetComponent<SpriteRenderer>().flipX = true;
+        // } 
+        // else if (((Vector2)transform.position).x < targetPos.x)
+        // {
+        //     Debug.Log("inside " + transform.position.x + " > " + targetPos.x);
+        //     Caveman.GetComponent<SpriteRenderer>().flipX = false;
         // }
         
+
         targetPos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.position = targetPos;
+     
     }
     if((Vector2)transform.position != targetPos)
     {
        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+       
     }
 }
 
 
+//Tells when there is a collision between plaer and another object and then destroys thta object
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("in");
 
-    
+        if(collision.gameObject.name.Contains("orangecrab"))        
+        {
+        Destroy(collision.gameObject);
+         
+        }  
+    }
+
+// void OnMouseOver()
+// {
+//     Debug.Log(gameObject.name);
+// }   
 
     //Code to make caveman move with
     // [SerializeField]

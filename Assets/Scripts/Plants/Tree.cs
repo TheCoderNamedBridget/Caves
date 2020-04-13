@@ -38,7 +38,7 @@ public class Tree : MonoBehaviour
 
         if(timeLeft < 0)
         {
-            Debug.Log("Time is up");
+            //Debug.Log("Time is up");
 
             if ( numberOfFruit < 4)
             {

@@ -55,7 +55,6 @@
   <ItemGroup>
      <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Animal\AnimalMovement.cs" />
-     <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Plants\Fruit.cs" />
      <Compile Include="Assets\Scripts\Plants\Tree.cs" />
