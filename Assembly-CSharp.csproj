@@ -58,10 +58,12 @@
      <Compile Include="Assets\Scripts\Animal\AnimalMovement.cs" />
      <Compile Include="Assets\Scripts\Animal\Predator.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Options.cs" />
      <Compile Include="Assets\Scripts\Plants\Fruit.cs" />
      <Compile Include="Assets\Scripts\Plants\Tree.cs" />
-     <Compile Include="Assets\Scripts\Player\LevelManager.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerInfo.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerCollisions.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <None Include="Assets\Resources\path.txt" />
      <None Include="Assets\Resources\oceantown.txt" />

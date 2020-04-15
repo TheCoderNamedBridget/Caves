@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-//[SerializeField] GameObject Caveman;
+
+    
+[SerializeField] 
+Transform Caveman;
+
 [SerializeField] 
 Transform target;
+
+
 float speed = 6f;
+
 Vector2 targetPos;
+
+GameObject button;
  
 
 
 private void Start()
 {
-    
+    //button = GameObject.Find("Button");
     targetPos = transform.position;
 }
  
@@ -50,17 +59,6 @@ transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
 }
 
 
-//Tells when there is a collision between plaer and another object and then destroys thta object
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("in");
-
-        if(collision.gameObject.name.Contains("orangecrab"))        
-        {
-        Destroy(collision.gameObject);
-         
-        }  
-    }
 
 // void OnMouseOver()
 // {

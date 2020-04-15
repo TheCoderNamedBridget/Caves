@@ -48,8 +48,8 @@ public class AnimalBehavior : MonoBehaviour
     void StartToPoop ()
     {
         Debug.Log("insie start to poop ");
-        Animator animator = animal.GetComponent<Animator>();
-        animator.runtimeAnimatorController = Resources.Load("greentrexshitting1") as RuntimeAnimatorController;
+        // Animator animator = animal.GetComponent<Animator>();
+        // animator.runtimeAnimatorController = Resources.Load("greentrexshitting1") as RuntimeAnimatorController;
         Poop();
     }
 }
