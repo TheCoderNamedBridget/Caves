@@ -6,17 +6,7 @@ public class PlayerCollisions : MonoBehaviour
 {
 
     List<Item> Inventory = new List<Item>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     
@@ -31,31 +21,40 @@ public class PlayerCollisions : MonoBehaviour
 
         string ItemName = collision.gameObject.name;
 
-        Item objectToPickUp = new Item( ItemName );
+        bool InList = false;
+
+        int indexOfItem = 0;
+
+        for (int i = 0; i < Inventory.Count; i++)
+        {
+            if (Inventory[i].GetName().Equals(ItemName))
+            {
+                InList = true;
+                indexOfItem = i;
+            }
+        }
 
 
         //Todo: Finish searching inventory for the same items
         //Finish keeping coreect count of the items
-        if ( !Inventory.Contains( objectToPickUp))
+        if ( !InList)
         {
 
-
+            Item objectToPickUp = new Item( ItemName );
             Inventory.Add(objectToPickUp);
             objectToPickUp.AddItem();
+            Debug.Log("Name of object = [" + objectToPickUp.GetName() + "] Num Objects [" + objectToPickUp.GetNumItems() +"]");
+
         } 
         else 
         {
-            for (int i = 0; i < Inventory.Count; i++)
-            {
-                if (Inventory[i].GetName().Equals(ItemName))
-                {
-                    Inventory[i].AddItem();
-                }
-            }
+
+            Inventory[indexOfItem].AddItem();
+            Debug.Log("Name of object = [" + Inventory[indexOfItem].GetName() + "] Num Objects [" + Inventory[indexOfItem].GetNumItems() +"]");
             
         }
 
-        Debug.Log("Name of object = [" + objectToPickUp.GetName() + "] Num Objects [" + objectToPickUp.GetNumItems() +"]");
+        
 
         UnityEngine.Object.Destroy(collision.gameObject);
         }
