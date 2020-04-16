@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollisions : MonoBehaviour
 {
-
+    private Button First;
+    public Sprite Image1;
     List<Item> Inventory = new List<Item>();
 
-
-
-    
 //Tells when there is a collision between plaer and another object and then destroys thta object
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,30 +16,40 @@ public class PlayerCollisions : MonoBehaviour
         {
 
         
-        Debug.Log("in");
+            Debug.Log("in");
 
-        string ItemName = collision.gameObject.name;
+            string ItemName = collision.gameObject.name;
 
-        bool InList = false;
+            bool InList = false;
 
-        int indexOfItem = 0;
+            int indexOfItem = 0;
 
-        for (int i = 0; i < Inventory.Count; i++)
-        {
-            if (Inventory[i].GetName().Equals(ItemName))
+            for (int i = 0; i < Inventory.Count; i++)
             {
-                InList = true;
-                indexOfItem = i;
+                if (Inventory[i].GetName().Equals(ItemName))
+                {
+                    InList = true;
+                    indexOfItem = i;
+                }
             }
-        }
 
 
         //Todo: Finish searching inventory for the same items
         //Finish keeping coreect count of the items
         if ( !InList)
         {
+            
 
             Item objectToPickUp = new Item( ItemName );
+
+            Sprite spriteToUse = Resources.Load(ItemName, typeof(Sprite)) as Sprite;
+
+            //Debug.Log( "Name of sprite " + spriteToUse.GetName());
+            
+            First = GameObject.Find("First").GetComponent<Button>();
+            First.GetComponent<Image>().sprite = Resources.Load("poop", typeof(Sprite)) as Sprite;
+
+
             Inventory.Add(objectToPickUp);
             objectToPickUp.AddItem();
             Debug.Log("Name of object = [" + objectToPickUp.GetName() + "] Num Objects [" + objectToPickUp.GetNumItems() +"]");
